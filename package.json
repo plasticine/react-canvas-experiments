@@ -1,0 +1,27 @@
+{
+  "name": "react-canvas-experiments",
+  "version": "1.0.0",
+  "description": "Playing around with react-canvas",
+  "main": "gulpfile.js",
+  "scripts": {
+    "start": "./node_modules/.bin/gulp",
+    "build": "./node_modules/.bin/gulp build"
+  },
+  "author": "Justin Morris",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-eslint": "^1.0.13",
+    "eslint": "^0.16.0",
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4",
+    "react-hot-loader": "^1.1.7",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "dependencies": {
+    "babel-core": "^4.7.3",
+    "babel-loader": "^4.1.0",
+    "react": "^0.13.0-rc2",
+    "react-canvas": "0.0.1",
+    "rebound": "0.0.10"
+  }
+}
