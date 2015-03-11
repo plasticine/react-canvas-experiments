@@ -38,7 +38,7 @@ Justin Morris
 - I dunno.
 
 Whatever. Do what you want.
-Make you Users happy. ✌️
+Make your Users happy. ✌️
 
 ***
 
