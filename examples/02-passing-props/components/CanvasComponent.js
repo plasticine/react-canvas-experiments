@@ -9,11 +9,11 @@ export default class CanvasComponent extends React.Component {
     let textStyle = this.textStyle();
     let roundRectStyle = this.roundRectStyle();
 
-    // let textMetrics = canvas.measureText(this.props.message, size.width, textStyle.fontFace, textStyle.fontSize, textStyle.lineHeight);
-    // textStyle.height = textMetrics.height;
-    // textStyle.width = textMetrics.width;
-    // textStyle.top = (roundRectStyle.top + roundRectStyle.height / 2) - textMetrics.height / 2
-    // textStyle.left = (roundRectStyle.left + roundRectStyle.width / 2) - textMetrics.width / 2
+    let textMetrics = canvas.measureText(this.props.message, size.width, textStyle.fontFace, textStyle.fontSize, textStyle.lineHeight);
+    textStyle.height = textMetrics.height;
+    textStyle.width = textMetrics.width;
+    textStyle.top = (roundRectStyle.top + roundRectStyle.height / 2) - textMetrics.height / 2
+    textStyle.left = (roundRectStyle.left + roundRectStyle.width / 2) - textMetrics.width / 2
 
     return (
       <canvas.Surface top={0} lzeft={0} width={size.width} height={size.height}>
@@ -42,7 +42,7 @@ export default class CanvasComponent extends React.Component {
     return {
       // width: 600,
       // height: 200,
-      fontFace: canvas.FontFace('Georgia', null, {weight: 500}),
+      fontFace: canvas.FontFace('Helvetica', null, {weight: 700}),
       fontSize: 48,
       lineHeight: 64,
       textAlign: 'center',

@@ -28,22 +28,20 @@ class App extends React.Component {
     let size = this.getViewportSize();
     return (
       <canvas.Surface top={0} left={0} width={size.width} height={size.height}>
-        {this.renderRoundRect()}
         {this.renderAwesomeCircle()}
       </canvas.Surface>
     );
   }
 
   renderAwesomeCircle() {
-    console.log(this.state.scale)
     let size = this.getViewportSize();
     let roundRectStyle = {
-      width: 50 * this.state.scale,
-      height: 50 * this.state.scale,
+      width: 200 * this.state.scale,
+      height: 200 * this.state.scale,
       top: (size.height / 2 - 100),
       left: (size.width / 2 - 100),
       backgroundColor: 'red',
-      borderRadius: 50 * this.state.scale / 2,
+      borderRadius: 100 * this.state.scale / 2,
       zIndex: 2
     };
     return (

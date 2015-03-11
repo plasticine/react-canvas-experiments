@@ -43,7 +43,7 @@ class App extends React.Component {
   getImageGroupStyle() {
     return {
       position: 'relative',
-      flex: 1,
+      flex: 2,
       backgroundColor: '#ccc'
     };
   }

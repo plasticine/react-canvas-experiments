@@ -1,6 +1,11 @@
 footer: \#MelbJS March 11, 2015 — @plasticine
 slidenumbers: true
 
+# THIS SLIDE INTENTIONALLY BLANK
+## LOL
+
+***
+
 # Things I Learned Messing Around with `react-canvas`
 
 Justin Morris
@@ -114,6 +119,7 @@ Other things doing similar things;
 
 - React ART[^6] (ART / SVG bindings)
 - React Native (Native bindings)
+- React X11 (github.com/sidorares/node-x11)
 - React WebGL…?
 
 [^6]: https://github.com/reactjs/react-art
@@ -258,11 +264,11 @@ The `<canvas>` element is inherently inaccessible.
 ![](SerpentsandDragons.jpg)
 
 ``` html
-<canvas> 
+<canvas>
   Fallback content somehow?
 
   ¯\_(ツ)_/¯
-</canvas> 
+</canvas>
 ```
 
 ***
