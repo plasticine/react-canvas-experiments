@@ -1,11 +1,6 @@
 footer: \#MelbJS March 11, 2015 — @plasticine
 slidenumbers: true
 
-# THIS SLIDE INTENTIONALLY BLANK
-## LOL
-
-***
-
 # Things I Learned Messing Around with `react-canvas`
 
 Justin Morris
