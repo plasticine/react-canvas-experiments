@@ -2,6 +2,7 @@ var fs = require('fs');
 var path = require('path');
 var webpack = require('webpack');
 var examplesPath = path.join(__dirname, './examples');
+var CompressionPlugin = require('compression-webpack-plugin');
 
 function isDirectory(dir) {
   return fs.lstatSync(dir).isDirectory();
@@ -32,6 +33,8 @@ var webpackConfig = {
   },
 
   plugins: [
+    new webpack.PrefetchPlugin('react'),
+    new webpack.PrefetchPlugin('react-canvas'),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     }),
@@ -44,5 +47,16 @@ var webpackConfig = {
     ]
   }
 };
+
+if ( process.env.NODE_ENV !== 'development' ) {
+  webpackConfig.watch = false;
+  webpackConfig.devtool = false;
+  webpackConfig.plugins.push(new webpack.optimize.DedupePlugin());
+  webpackConfig.plugins.push(new webpack.optimize.OccurenceOrderPlugin());
+  webpackConfig.plugins.push(new webpack.optimize.UglifyJsPlugin({
+    compress: { warnings: false }
+  }));
+  webpackConfig.plugins.push(new CompressionPlugin());
+}
 
 module.exports = webpackConfig;
