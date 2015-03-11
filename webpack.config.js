@@ -4,6 +4,8 @@ var webpack = require('webpack');
 var examplesPath = path.join(__dirname, './examples');
 var CompressionPlugin = require('compression-webpack-plugin');
 
+process.env.NODE_ENV = process.env.NODE_ENV || 'development';
+
 function isDirectory(dir) {
   return fs.lstatSync(dir).isDirectory();
 }

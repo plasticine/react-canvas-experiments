@@ -18,7 +18,7 @@
     "gulp": "^3.8.11",
     "gulp-util": "^3.0.4",
     "gulp-webpack-build": "^0.6.0",
-    "react-hot-loader": "^1.1.7",
+    "react-hot-loader": "^1.2.2",
     "webpack-dev-server": "^1.7.0"
   },
   "dependencies": {
